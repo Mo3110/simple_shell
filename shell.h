@@ -125,11 +125,11 @@ char *find_path(info_t *, char *, char *);
 /* loophsh.c */
 int loophsh(char **);
 
-/* toem_errors.c */
-void _eputs(char *);
-int _eputchar(char);
-int _putfd(char c, int fd);
-int _putsfd(char *str, int fd);
+/* ok_errors.c */
+void ok_eputs(char *);
+int ok_eputchar(char);
+int ok_putfd(char o, int fd);
+int ok_putsfd(char *str, int fd);
 
 /* toem_string.c */
 int _strlen(char *);
