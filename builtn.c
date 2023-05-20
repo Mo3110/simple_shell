@@ -60,9 +60,8 @@ int myCd(info_t *info)
 			putchar('\n');
 			return (1);
 		}
-		puts(getEnv(info, "OLDPWD="));
-		putchar('\n');
-		chdirRet = /* TODO: what should this be? */
+		puts(getEnv(info, "OLDPWD=")), putchar('\n');
+		chdirRet = /* TODO: what supposed this be? */
 			chdir((dir = getEnv(info, "OLDPWD=")) ? dir : "/");
 	}
 	else
