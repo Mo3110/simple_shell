@@ -54,7 +54,7 @@ void freeInfo(info_t *info, int all)
 	info->path = NULL;
 	if (all)
 	{
-		if (!info->cmdBuf)
+		if (!info->cmd_buf)
 			free(info->arg);
 		if (info->env)
 			freeList(&(info->env));
@@ -64,7 +64,7 @@ void freeInfo(info_t *info, int all)
 			freeList(&(info->alias));
 		ffree(info->environ);
 		info->environ = NULL;
-		bfree((void **)info->cmdBuf);
+		bfree((void **)info->cmd_buf);
 		if (info->readfd > 2)
 			close(info->readfd);
 		_putchar(BUF_FLUSH);

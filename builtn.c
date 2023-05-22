@@ -22,10 +22,10 @@ int myExit(info_t *info)
 			ePutchar('\n');
 			return (1);
 		}
-		info->errNum = errStringToInteger(info->argv[1]);
+		info->err_num = errStringToInteger(info->argv[1]);
 		return (-2);
 	}
-	info->errNum = -1;
+	info->err_num = -1;
 	return (-2);
 }
 

@@ -36,9 +36,9 @@ int myShellLoop(info_t *info, char **av)
 		exit(info->status);
 	if (builtin_ret == -2)
 	{
-		if (info->errNum == -1)
+		if (info->err_num == -1)
 			exit(info->status);
-		exit(info->errNum);
+		exit(info->err_num);
 	}
 	return (builtin_ret);
 }
@@ -55,7 +55,7 @@ int myShellLoop(info_t *info, char **av)
 int findBuiltin(info_t *info)
 {
 	int i, builtInRet = -1;
-	builtinTable builtInTbl[] = {
+	builtin_table builtInTbl[] = {
 		{"exit", myExit},
 		{"env", myEnv},
 		{"help", myHelp},
