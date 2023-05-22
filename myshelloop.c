@@ -89,10 +89,10 @@ void findCmd(info_t *info)
 	int i, k;
 
 	info->path = info->argv[0];
-	if (info->linecountFlag == 1)
+	if (info->linecount_flag == 1)
 	{
 		info->lineCount++;
-		info->linecountFlag = 0;
+		info->linecount_flag = 0;
 	}
 	for (i = 0, k = 0; info->arg[i]; i++)
 		if (!isDelim(info->arg[i], " \t\n"))
